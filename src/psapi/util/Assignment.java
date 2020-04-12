@@ -1,4 +1,4 @@
-package psapi;
+package psapi.util;
 
 public class Assignment {
 
