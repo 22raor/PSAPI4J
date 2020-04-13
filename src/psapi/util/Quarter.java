@@ -2,6 +2,8 @@ package psapi.util;
 
 import java.util.ArrayList;
 
+import com.gargoylesoftware.htmlunit.html.HtmlPage;
+
 /**
  * Class to represent a quarter of a course
  * @author Rishi Rao
@@ -10,7 +12,21 @@ import java.util.ArrayList;
 public class Quarter {
 	private ArrayList<Assignment> assignments;
 	private double finalGrade;
-	public int quarterNum;
+	private int quarterNum;
+	private HtmlPage quarterPage;
+	/**
+	 * @return the quarterPage
+	 */
+	public HtmlPage getQuarterPage() {
+		return quarterPage;
+	}
+
+	/**
+	 * @param quarterPage the quarterPage to set
+	 */
+	public void setQuarterPage(HtmlPage quarterPage) {
+		this.quarterPage = quarterPage;
+	}
 
 	/**
 	 * Creates a new quarter object
@@ -18,10 +34,11 @@ public class Quarter {
 	 * @param finalGrade
 	 * @param quarterNum
 	 */
-	public Quarter(ArrayList<Assignment> ass, double finalGrade, int quarterNum) {
+	public Quarter(ArrayList<Assignment> ass, double finalGrade, int quarterNum, HtmlPage page) {
 		assignments = ass;
 		this.finalGrade = finalGrade;
 		this.quarterNum = quarterNum;
+		quarterPage = page;
 	}
 
 	/**

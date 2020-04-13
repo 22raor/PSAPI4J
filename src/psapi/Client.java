@@ -53,6 +53,22 @@ public class Client {
 		
 	}
 	
+	public HtmlPage getPS(String url) {
+		try {
+			return client.getPage("https://powerschool.bcsc.k12.in.us/" + url);
+		} catch (FailingHttpStatusCodeException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (MalformedURLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+	}
+	
 	
 	
 	public List<DomElement> getAsHtml(String id) {

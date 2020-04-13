@@ -3,10 +3,10 @@ package psapi.util;
 import java.util.ArrayList;
 
 public class Course {
-	public ArrayList<Quarter> quarters;
-	public String courseName;
-	public String courseTeacher;
-	public String room;
+	private ArrayList<Quarter> quarters;
+	private String courseName;
+	private String courseTeacher;
+	private String room;
 
 	/**
 	 * @param quarters
